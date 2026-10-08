@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏨 Grand Stay Hotel</h1>
+        <p>Hotel Management System</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Hotel Information -->
+        <div class="card">
+            <h2>Hotel Information</h2>
+
+            <p>Total Rooms: <b>10</b></p>
+            <p>Maximum Records: <b>5</b></p>
+            <p>Reserved Rooms: <b id="reservedRooms">0</b></p>
+            <p>Empty Rooms: <b id="emptyRooms">10</b></p>
+        </div>
+
+
+        <!-- Room Reservation -->
+        <div class="card">
+
+            <h2>Room Reservation</h2>
+
+            <label>Customer Name</label>
+            <input type="text" id="customerName">
+
+            <label>Room Number</label>
+            <select id="roomNumber">
+                <option value="1">Room 1</option>
+                <option value="2">Room 2</option>
+                <option value="3">Room 3</option>
+                <option value="4">Room 4</option>
+                <option value="5">Room 5</option>
+                <option value="6">Room 6</option>
+                <option value="7">Room 7</option>
+                <option value="8">Room 8</option>
+                <option value="9">Room 9</option>
+                <option value="10">Room 10</option>
+            </select>
+
+            <label>Number of Days</label>
+            <input type="number" id="days" min="1">
+
+            <button onclick="reserveRoom()">
+                Reserve Room
+            </button>
+
+        </div>
+
+
+        <!-- Empty Rooms -->
+        <div class="card">
+
+            <h2>Empty Rooms</h2>
+
+            <button onclick="showEmptyRooms()">
+                Show Empty Rooms
+            </button>
+
+            <p id="emptyRoomList">
+                Click the button to view empty rooms.
+            </p>
+
+        </div>
+
+
+        <!-- Reservation Records -->
+        <div class="bill">
+
+            <h2>Reservation Records</h2>
+
+            <p>
+                Records:
+                <b id="recordCount">0 / 5</b>
+            </p>
+
+            <div id="reservationList">
+                <p>No reservations yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>Hotel Management Mini Project</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
